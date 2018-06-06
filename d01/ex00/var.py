@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def ft_var():
+def my_var():
     # variable integer
     var_int = 42                # or int(42)
     # variable string
@@ -32,4 +32,4 @@ def ft_var():
 
 
 if __name__ == '__main__':
-    ft_var()
+    my_var()
