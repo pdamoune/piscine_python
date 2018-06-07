@@ -18,14 +18,17 @@ capital_cities = {
 }
 
 
-def get_capital():
+def reverse(value, dict):
+    return ([key for key, val in dict.items() if val == value])
+
+
+def get_state(arg):
     if len(sys.argv) != 2:
         sys.exit()
-    state = states.get(sys.argv[1])
-    if not state:
-        sys.exit("Unknown state")
-    print(capital_cities[state])
+    codes = reverse(sys.argv[1], capital_cities)
+    for code in codes:
+        print(*reverse(code, states))
 
 
 if __name__ == '__main__':
-    get_capital()
+    get_state()
