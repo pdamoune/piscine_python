@@ -1,31 +1,26 @@
 #!/usr/bin/env python3
-
-from turtle import *
-
-def carre(taille, couleur):
-    "fonction qui dessine un carré de taille et de couleur déterminées"
-    color(couleur)
-    c =0
-    while c <4:
-        forward(taille)
-        right(90)
-        c = c +1
+import string
+import turtle
 
 
-up()                    # relever le crayon
-goto(-150, 50)          # reculer en haut à gauche
+class Time():
+    """docstring for ."""
+    def __init__(self, h=0, m=0, s=0):
+        self.h = h
+        self.m = m
+        self.s = s
 
-# dessiner dix carrés rouges, alignés :
-i = 0
-while i < 10:
-    down()              # abaisser le crayon
-    carre(25, 'red')    # tracer un carré
-    up()                # relever le crayon
-    forward(30)         # avancer + loin
-    i = i +1
+    def __repr__(self):
+        return("Time(%d, %d, %d)" % (self.h, self.m, self.s))
 
-a = input()             # attendre
+    def __str__(self):
+        return("Il est %dh %dm %ds" % (self.h, self.m, self.s))
+
+    def affiche_heure(self):
+        print("%d:%d:%d" % (self.h, self.m, self.s))
 
 
 if __name__ == '__main__':
-    carre(50, "black")
+
+    time = Time(1, 2, 3)
+    print(time)
