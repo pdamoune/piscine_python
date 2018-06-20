@@ -24,3 +24,5 @@ if __name__ == '__main__':
 
     time = Time(1, 2, 3)
     print(time)
+if __name__ == '__main__':
+    main()
